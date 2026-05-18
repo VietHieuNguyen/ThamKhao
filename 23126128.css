@@ -1,0 +1,296 @@
+/*============================================================================
+  IMPORT FONTS & DECLARE GLOBAL VARIABLES
+============================================================================*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+    --pink-color: #f2726a; /* Màu hồng dùng chung */
+}
+
+/*============================================================================
+  RESET & GLOBAL STYLE
+============================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #f5f5f5; /* Màu nền tổng thể */
+}
+
+/* Phần bao ngoài chính */
+#wapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*============================================================================
+  HEADER
+============================================================================*/
+#header_23126128 {
+    background-color: #FFF4E6; /* Màu phụ: nền sáng */
+    position: relative;
+    z-index: 100;
+    width: 100%; 
+}
+
+.container_23126128 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.logo_23126128 {
+    color: #FF6B00; /* Màu chủ đạo */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 18px 20px; 
+    text-align: left;
+    position: absolute;
+    left: 0; 
+    margin: 0; 
+}
+
+/*============================================================================
+  NAVIGATION
+============================================================================*/
+#main-menu-23126128 {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    align-items: center;
+}
+
+#main-menu-23126128 li a {
+    color: #1F1F1F; /* Màu chữ chính */
+    display: block;
+    padding: 18px 20px;
+    text-decoration: none;
+}
+
+#main-menu-23126128 li {
+    position: relative;
+}
+
+#main-menu-23126128 > li > a {
+    position: relative;
+    padding: 10px 20px;
+    margin: 8px 5px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Hiệu ứng nảy mượt mà */
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+#main-menu-23126128 > li:hover > a {
+    color: #FF6B00; /* Chữ màu cam điểm nhấn */
+    background: rgba(255, 107, 0, 0.15); /* Nền cam mờ mờ (transparent) */
+    transform: translateY(-4px); /* Nhảy lên cao hơn 1 xíu */
+    box-shadow: none; /* Bỏ bóng nguyên khối để trông thanh thoát hơn */
+    text-shadow: none;
+}
+
+/* Sub-menu */
+#main-menu-23126128 ul.sub-menu-23126128 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFF4E6; /* Màu nền nhạt */
+    border: 1px solid #FFDAB9; /* Viền nhạt */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    display: none;
+    box-sizing: border-box;
+}
+
+#main-menu-23126128 ul.sub-menu-23126128 ul.sub-menu-23126128 {
+    left: 100%;
+    top: 0;
+    margin-left: 1px;
+}
+
+#main-menu-23126128 li:hover > ul.sub-menu-23126128 {
+    display: block;
+}
+
+#main-menu-23126128 ul.sub-menu-23126128 a {
+    padding: 10px 15px;
+    border-bottom: 1px solid #FFDAB9;
+    color: #1F1F1F;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+#main-menu-23126128 ul.sub-menu-23126128 li:last-child a {
+    border-bottom: none;
+}
+
+#main-menu-23126128 ul.sub-menu-23126128 a:hover {
+    color: #FF6B00;
+}
+
+/* Search Container */
+.search-container_23126128 {
+    background-color: #FFF4E6;
+    border: 1px solid #FF6B00;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    transition: width 0.6s ease-in;
+    margin-left: auto;
+    bottom: 0px;
+}
+
+.search-container_23126128.open {
+    width: 250px;
+}
+
+.search-btn_23126128 {
+    background-color: #FF6B00;
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.search-box_23126128 {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #FFF4E6;
+    color: #1F1F1F;
+    display: none;
+}
+
+.search-container_23126128.open .search-box_23126128 {
+    display: flex;
+}
+
+/*============================================================================
+  CONTENT
+============================================================================*/
+.slider_23126128 {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .image_23126128 {
+    width: 23%;
+    height: 200px;
+    overflow: hidden;
+    margin: 5px; 
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.25s ease-in-out; 
+    position: relative; 
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.15s ease-in-out;
+  }
+  
+  .image_23126128:hover {
+    transform: scale(1.2); 
+    z-index: 15; 
+    transform-origin: center center; 
+  }
+  
+/*============================================================================
+MODAL
+============================================================================*/
+.modal_23126128 {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;              /* Sử dụng flexbox */
+  align-items: center;        /* Căn giữa theo chiều dọc */
+  justify-content: center;    /* Căn giữa theo chiều ngang */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content_23126128 {
+  width: auto;                /* Tự động điều chỉnh chiều rộng dựa trên tỷ lệ */
+  height: auto;               /* Tự động điều chỉnh chiều cao dựa trên tỷ lệ */
+  max-width: 90%;            /* Giới hạn chiều rộng tối đa */
+  max-height: 90%;           /* Giới hạn chiều cao tối đa */
+  object-fit: contain;        /* Giữ tỷ lệ gốc, không cắt xén */
+  border-radius: 10px;
+  display: block;            /* Đảm bảo hình ảnh là block để căn giữa */
+  margin: auto;              /* Căn giữa theo chiều ngang */
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;             /* Đảm bảo nút đóng nằm trên hình ảnh */
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Slider */
+.image_23126128 {
+  width: 23%;
+  height: 200px;
+  overflow: hidden;
+  margin: 5px; 
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.25s ease-in-out;
+  position: relative; 
+  z-index: 15; /* Đảm bảo ảnh không bị che khuất */
+}
+
+.image_23126128:hover {
+  transform: scale(1.2); 
+  z-index: 1000; /* Đảm bảo ảnh hover sẽ đè lên tất cả */
+  transform-origin: center center;
+}
+
